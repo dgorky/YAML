@@ -1,0 +1,46 @@
+
+## KEY VALUE PAIR
+username: adminuser
+port: 4312
+appname: powercenter
+
+
+## COMMENTS
+# Authentication
+username: adminuser
+
+# Network
+port: 4312
+
+# Application properties
+appname: powercenter
+
+
+## OBJECTS
+#Microservices
+microservices:
+- app: user-service
+  port: 8080
+  version: 1.7
+- app: address-service
+  port: 8789
+  version: 1.1
+
+## STRINGS
+location: westeurope
+accountname: 'accountant'
+scriptLocation: "inlineScript"
+textcontent: |
+  First line
+  second line
+  third line
+
+## VARIABLES
+trigger: none
+
+pool:
+  vmImage: 'windows-latest'
+
+variables:
+- name: AzureSubscription
+  value: '$(ServiceConnection)'
