@@ -1,0 +1,15 @@
+stages:
+  - stage: BuildandtestOnDev
+    displayName: 'Deploy on DevTest'
+    jobs:
+      - job: 'Preparation'
+        displayName: 'Preparation'
+        steps:
+        - task: NugetToolInstaller@1
+  - stage: DeployOnProd
+    displayName: 'Deploy on Prod'
+    jobs:
+      - job: 'Preparation'
+        displayName: 'Preparation'
+        steps:
+        - task: NugetToolInstaller@1
